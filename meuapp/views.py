@@ -9,3 +9,7 @@ def potencia(request, base , expoente):
     return HttpResponse(f" A potencia com base {base} e expoente {expoente} é {base ** expoente}")
 def potencia10(request,  expoente):
     return HttpResponse(f" A potencia com base 10 e expoente {expoente} é {10 ** expoente}")
+def meutemplate(request):
+    titulo ="Pagina teste template"
+    lista = ["CSS", "Javascript", "HTML"]
+    return render(request, "exemplo/index.html", {"lista":lista,"titulo":titulo})
